@@ -9,11 +9,21 @@ html {
   box-sizing: border-box;
 }
 
+img{
+	float:right;
+}
 body {
 	background-color: gray;
 	width: 960px;
 	position:relative; 
+	animation-name: color;
+	 animation-duration: 4s;
     }
+
+  @keyframes color {
+    from {background-color: gray;}
+    to  {background-color: indigo;}
+     }
 
   h1 {
 	font-family: "Georgia", Times, "Times New Roman", serif;
@@ -29,4 +39,6 @@ body {
 
   
 
-  
+  #guessessofartitle{
+	font-size: 30px;
+  }

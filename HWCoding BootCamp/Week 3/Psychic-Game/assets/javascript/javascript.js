@@ -1,18 +1,17 @@
 
-//Computer picks random letter
- letter = String.fromCharCode(97 + Math.floor(Math.random() * 26));
-	 console.log(letter)
+//Generate array for random letter
+ letter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n","o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"];
+	var letterguess=letter[Math.floor(Math.random() * letter.length)];
+	console.log(letterguess);
 
 //Define Wins, losses, and guesses left
-
-
-	var wintitle="Number of wins:  "
-	var wins=0
-	var losstitle="Number of losses:  "
-	var losses=0
-	var guesslefttitle= "Guesses left:  " 
-	var guessesleft=10
-	var guessessofartitle= "Guesses so far:  "
+	var wintitle="Number of wins:  ";
+	var wins=0;
+	var losstitle="Number of losses:  ";
+	var losses=0;
+	var guesslefttitle= "Guesses left:  " ;
+	var guessesleft=10;
+	var guessessofartitle= "Guesses so far:  ";
 	var userGuess =[];
 	
 	document.getElementById("wins").innerHTML =  wintitle + wins;
@@ -20,12 +19,9 @@
 	document.getElementById("guessesleft").innerHTML = guesslefttitle + guessesleft;
 	document.getElementById("userGuess").innerHTML = guessessofartitle + userGuess;
 
-	
+for(var num=0; num < 11; num++) {
  //Put guesses in array
-	//Define array as empty
-
-
-	//Run function to keyboard
+ //Run function to keyboard
 		document.onkeyup = function(event) {
 			// Determines which key was pressed
 			guess1 = event.key;
@@ -33,20 +29,17 @@
 			console.log(guess1);
 			//Add key press to array
 			userGuess.push(guess1);
-			console.log(userGuess)
+			console.log(userGuess);
 			document.getElementById("userGuess").innerHTML = guessessofartitle + userGuess;
+};
 
+// pick random letter from array
+function();
 
-				};
-	 	
-
-
-
-// //Evaluate if user's guess is computer's guess in 10 tries
-	for(var num=0; num < 11; num++) {
-		guess1;
-		if (guess1===letter) {
-			alert("The letter was "+ letter +"! You win!");
+//Evaluate if user's guess is correct in 10 tries
+	console.log(guess1);
+		if (guess1===letterguess) {
+			alert("The letter was "+ letterguess +"! You win!");
 			console.log(wins);
 			wins++;
 			var guessesleft=10;
@@ -56,21 +49,21 @@
 			document.getElementById("guessesleft").innerHTML = guesslefttitle + guessesleft;
 			document.getElementById("userGuess").innerHTML = guessessofartitle + userGuess;
 		}
-	
 
-		else if (userGuess.indexOf(letter)===-1)	{
+		if (guess1!==letterguess) {
+			alert("Wrong! Try again");
 			console.log(guessesleft);
 			guessesleft--;
-			console.log(num);
-			num++;
-			var userGuess =[];
 			document.getElementById("wins").innerHTML =  wintitle + wins;
 			document.getElementById("losses").innerHTML =  losstitle + losses;
 			document.getElementById("guessesleft").innerHTML = guesslefttitle + guessesleft;
 			document.getElementById("userGuess").innerHTML = guessessofartitle + userGuess;
 		}
 
-	else if (guessesleft===0) {
+	
+	}
+		
+	if (guessesleft===0) {
 		alert("No more tries! You lose!");
 		console.log(losses);
 		losses++;
@@ -81,6 +74,6 @@
 		document.getElementById("guessesleft").innerHTML = guesslefttitle + guessesleft;
 		document.getElementById("userGuess").innerHTML = guessessofartitle + userGuess;
 	}
-}
+
 
 
