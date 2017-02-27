@@ -1,0 +1,44 @@
+/* Background pattern from Subtle Patterns */
+* {
+	font-family: "Arial", "Helvetica Nueue", Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+img{
+	float:right;
+}
+body {
+	background-color: gray;
+	width: 960px;
+	position:relative; 
+	animation-name: color;
+	 animation-duration: 4s;
+    }
+
+  @keyframes color {
+    from {background-color: gray;}
+    to  {background-color: indigo;}
+     }
+
+  h1 {
+	font-family: "Georgia", Times, "Times New Roman", serif;
+	font-size: 30px;
+	text-align: center;
+}
+
+  p {
+	font-family: "Georgia", Times, "Times New Roman", serif;
+	font-size: 25px;
+	color:yellow;
+}
+
+  
+
+  #guessessofartitle{
+	font-size: 30px;
+  }
